@@ -1,0 +1,29 @@
+@import 'utilities';
+
+:root {
+	--white : #fff,
+	--blue-100: #d2d0f2,
+	--blue-200: #d2d0f2,
+	--blue-400: #095dff,
+	--pink: #ff73fa,
+	--accent-color: #d03bd2,
+	--purple: #bf09ff,
+	--primary-color: #282636,
+	--secondary-color: #37344b,
+    --primary-text-color: #A9A5E4;
+    --heading-color: #E9E8FD;
+}
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	             		font-family: 'Roboto', sans-serif;
+                  text-transform: uppercase;
+}
