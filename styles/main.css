@@ -49,6 +49,11 @@
   color: var(--white);
 }
 
+.container {
+  margin: auto;
+  width: min(90%, 1440px);
+}
+
 :root {
   --white: #fff;
   --blue-100: #d2d0f2;
@@ -75,6 +80,70 @@ body {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   background-color: var(--primary-color);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  align-items: center;
+}
+.main-nav .logo-area {
+  display: flex;
+}
+.main-nav .logo-area img {
+  width: 60px;
+  height: 50px;
+}
+.main-nav .logo-area .text {
+  margin-left: 30px;
+  font-weight: bold;
+  text-transform: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.main-nav .right-part {
+  display: flex;
+}
+.main-nav .site-menu,
+.main-nav .socials {
+  display: flex;
+  list-style: none;
+}
+.main-nav .site-menu li,
+.main-nav .socials li {
+  margin-left: 20px;
+}
+.main-nav .site-menu a,
+.main-nav .socials a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.main-nav .site-menu {
+  margin-right: 60px;
+}
+.main-nav .socials {
+  transform: translateX(30px);
+}
+.main-nav .socials li:first-child {
+  margin-top: 3px;
+}
+.main-nav .socials a {
+  display: flex;
+  align-items: center;
+}
+.main-nav .socials img {
+  margin-right: 5px;
+}
+.main-nav .socials img[alt="github logo"] {
+  width: 28px;
+  height: 28px;
+}
+.main-nav .socials img[alt="discord logo"] {
+  width: 24px;
+  height: 22px;
 }
 
 /*# sourceMappingURL=main.css.map */

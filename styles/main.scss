@@ -27,3 +27,80 @@ body {
   text-transform: uppercase;
   background-color: var(--primary-color);
 }
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 2rem;
+  align-items: center;
+
+  .logo-area {
+    display: flex;
+
+    img {
+      width: 60px;
+      height: 50px;
+    }
+
+    .text {
+      margin-left: 30px;
+      font-weight: bold;
+      text-transform: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  .right-part {
+    display: flex;
+  }
+
+  .site-menu,
+  .socials {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--primary-text-color);
+    }
+  }
+
+  .site-menu {
+    margin-right: 60px;
+  }
+
+  .socials {
+    transform: translateX(30px);
+
+    li:first-child {
+      margin-top: 3px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 5px;
+
+      &[alt='github logo'] {
+        width: 28px;
+        height: 28px;
+      }
+
+      &[alt='discord logo'] {
+        width: 24px;
+        height: 22px;
+      }
+    }
+  }
+}
