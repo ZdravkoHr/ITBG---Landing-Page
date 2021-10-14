@@ -1,0 +1,23 @@
+{
+  "name": "itbg---landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass ./styles/main.scss ./styles/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZdravkoHr/ITBG---Landing-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZdravkoHr/ITBG---Landing-Page/issues"
+  },
+  "homepage": "https://github.com/ZdravkoHr/ITBG---Landing-Page#readme",
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}
