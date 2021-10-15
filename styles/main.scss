@@ -37,7 +37,8 @@ body {
 
   .logo-area {
     display: flex;
-
+    text-decoration: none;
+    cursor: pointer;
     img {
       width: 60px;
       height: 50px;
@@ -102,5 +103,36 @@ body {
         height: 22px;
       }
     }
+  }
+}
+
+.main-header {
+  .main-heading {
+    font-size: 3.5rem;
+    background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 4rem;
+  }
+
+  .hero-section {
+    display: flex;
+    padding: 120px 0;
+  }
+
+  .hero-img {
+    transform: scale(1.5) translateX(-50px) translateY(-20px);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .primary-text {
+    margin: 60px 0;
+  }
+
+  .btn {
+    padding: 10px 42px;
   }
 }

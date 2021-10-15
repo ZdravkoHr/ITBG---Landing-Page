@@ -15,10 +15,12 @@ $container-width: min(90%, 1440px);
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     height: 5px;
     width: 100%;
     background-color: var(--accent-color);
+    left: 0;
+    box-shadow: -5px 10px 61px var(--accent-color);
   }
 }
 
@@ -30,10 +32,6 @@ $container-width: min(90%, 1440px);
   text-transform: lowercase;
 }
 
-.main-heading {
-  font-size: 5rem;
-}
-
 .section-heading {
   font-size: 3.5rem;
 }
@@ -42,9 +40,11 @@ $container-width: min(90%, 1440px);
   cursor: pointer;
   border: 0;
   outline: none;
-  padding: 4px;
+  padding: 8px;
   border-radius: 3px;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
 
   &-primary {
     background-color: var(--blue-400);
