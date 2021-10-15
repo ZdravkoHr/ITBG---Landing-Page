@@ -35,20 +35,34 @@ $container-width: min(90%, 1440px);
 }
 
 .section-heading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
 }
 
 .btn {
   cursor: pointer;
-  border: 0;
+  border: 3px solid var(--blue-400);
+  color: var(--white);
+  background: none;
   outline: none;
-  padding: 4px;
+  padding: 5px 10px;
   border-radius: 3px;
   text-align: center;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
 
   &-primary {
     background-color: var(--blue-400);
     color: var(--white);
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    padding: 8px 35px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+
   }
 }
 
