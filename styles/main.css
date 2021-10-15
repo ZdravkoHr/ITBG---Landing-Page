@@ -148,6 +148,16 @@ body {
   height: 22px;
 }
 
+.header-gradient {
+  position: absolute;
+  top: -75px;
+  z-index: 2;
+}
+
+.main-header {
+  position: relative;
+  z-index: 3;
+}
 .main-header .main-heading {
   font-size: 3.5rem;
   background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
@@ -157,10 +167,14 @@ body {
 }
 .main-header .hero-section {
   display: flex;
-  padding: 120px 0;
+  padding: 110px 0;
+  position: relative;
 }
 .main-header .hero-img {
   transform: scale(1.5) translateX(-50px) translateY(-20px);
+  width: 590px;
+  flex-shrink: 0;
+  height: 600px;
 }
 .main-header .hero-img img {
   width: 100%;
@@ -171,6 +185,50 @@ body {
 }
 .main-header .btn {
   padding: 10px 42px;
+}
+.main-header .widget {
+  position: absolute;
+  z-index: 9;
+}
+.main-header .widget img {
+  width: 100%;
+}
+.main-header .figure {
+  top: 40px;
+  right: 45px;
+  width: 160px;
+}
+.main-header .pipe {
+  width: 80px;
+  right: 380px;
+  top: 490px;
+}
+.main-header .cursor {
+  width: 200px;
+  right: 40px;
+  top: 490px;
+}
+.main-header .plus-1 {
+  right: -40px;
+  top: 70px;
+}
+.main-header .plus-2 {
+  right: 530px;
+  top: 250px;
+}
+.main-header .plus-3 {
+  top: 450px;
+  right: 280px;
+}
+.main-header .plus-4 {
+  width: 20px;
+  top: 460px;
+  right: 500px;
+}
+.main-header .plus-5 {
+  width: 20px;
+  right: 25px;
+  top: 500px;
 }
 
 /*# sourceMappingURL=main.css.map */

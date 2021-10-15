@@ -106,7 +106,15 @@ body {
   }
 }
 
+.header-gradient {
+  position: absolute;
+  top: -75px;
+  z-index: 2;
+}
+
 .main-header {
+  position: relative;
+  z-index: 3;
   .main-heading {
     font-size: 3.5rem;
     background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
@@ -117,11 +125,15 @@ body {
 
   .hero-section {
     display: flex;
-    padding: 120px 0;
+    padding: 110px 0;
+    position: relative;
   }
 
   .hero-img {
     transform: scale(1.5) translateX(-50px) translateY(-20px);
+    width: 590px;
+    flex-shrink: 0;
+    height: 600px;
     img {
       width: 100%;
       height: 100%;
@@ -134,5 +146,58 @@ body {
 
   .btn {
     padding: 10px 42px;
+  }
+
+  .widget {
+    position: absolute;
+    z-index: 9;
+    img {
+      width: 100%;
+    }
+  }
+
+  .figure {
+    top: 40px;
+    right: 45px;
+    width: 160px;
+  }
+
+  .pipe {
+    width: 80px;
+    right: 380px;
+    top: 490px;
+  }
+
+  .cursor {
+    width: 200px;
+    right: 40px;
+    top: 490px;
+  }
+
+  .plus-1 {
+    right: -40px;
+    top: 70px;
+  }
+
+  .plus-2 {
+    right: 530px;
+    top: 250px;
+  }
+
+  .plus-3 {
+    top: 450px;
+    right: 280px;
+  }
+
+  .plus-4 {
+    width: 20px;
+    top: 460px;
+    right: 500px;
+  }
+
+  .plus-5 {
+    width: 20px;
+    right: 25px;
+    top: 500px;
   }
 }
