@@ -62,6 +62,8 @@ $container-width: min(90%, 1440px);
     border-radius: 3px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 1rem;
+
 
   }
 }
@@ -69,4 +71,12 @@ $container-width: min(90%, 1440px);
 .container {
   margin: auto;
   width: $container-width;
+}
+
+.main-footer{
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  background: var(--secondary-color);
+  padding: 1rem 0;
 }
