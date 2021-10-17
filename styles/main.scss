@@ -71,6 +71,7 @@ body {
       font-size: 1rem;
       text-decoration: none;
       color: var(--primary-text-color);
+      cursor: pointer;
     }
   }
 
@@ -116,11 +117,12 @@ body {
   position: relative;
   z-index: 3;
   .main-heading {
-    font-size: 3.5rem;
+    font-size: min(3vw, 3.5rem);
     background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 4rem;
+    width: 80%;
   }
 
   .hero-section {
@@ -134,6 +136,7 @@ body {
     width: 590px;
     flex-shrink: 0;
     height: 600px;
+    z-index: -1;
     img {
       width: 100%;
       height: 100%;

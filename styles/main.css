@@ -1,6 +1,6 @@
 .primary-text {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: min(1.5vw, 1.5rem);
   color: var(--primary-text-color);
 }
 
@@ -122,6 +122,7 @@ body {
   font-size: 1rem;
   text-decoration: none;
   color: var(--primary-text-color);
+  cursor: pointer;
 }
 .main-nav .site-menu {
   margin-right: 60px;
@@ -159,11 +160,12 @@ body {
   z-index: 3;
 }
 .main-header .main-heading {
-  font-size: 3.5rem;
+  font-size: min(3vw, 3.5rem);
   background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 4rem;
+  width: 80%;
 }
 .main-header .hero-section {
   display: flex;
@@ -175,6 +177,7 @@ body {
   width: 590px;
   flex-shrink: 0;
   height: 600px;
+  z-index: -1;
 }
 .main-header .hero-img img {
   width: 100%;
