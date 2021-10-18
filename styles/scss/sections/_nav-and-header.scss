@@ -1,0 +1,172 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  align-items: center;
+
+  .logo-area {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    img {
+      width: 60px;
+      height: 50px;
+    }
+
+    .text {
+      margin-left: 30px;
+      font-weight: bold;
+      text-transform: none;
+      color: var(--blue-100);
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  .right-part {
+    display: flex;
+  }
+
+  .site-menu,
+  .socials {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--primary-text-color);
+      cursor: pointer;
+    }
+  }
+
+  .site-menu {
+    margin-right: 60px;
+  }
+
+  .socials {
+    transform: translateX(30px);
+
+    li:first-child {
+      margin-top: 3px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 5px;
+
+      &[alt='github logo'] {
+        width: 25px;
+        height: 25px;
+      }
+
+      &[alt='discord logo'] {
+        width: 24px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.header-gradient {
+  position: absolute;
+  top: -75px;
+  z-index: 2;
+}
+
+.main-header {
+  position: relative;
+  z-index: 3;
+  .main-heading {
+    font-size: min(3vw, 3.5rem);
+    line-height: 4rem;
+    width: 80%;
+  }
+
+  .hero-section {
+    display: flex;
+    padding: 110px 0;
+    position: relative;
+  }
+
+  .hero-img {
+    transform: scale(1.5) translateX(-50px) translateY(-20px);
+    width: 590px;
+    flex-shrink: 0;
+    height: 600px;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .primary-text {
+    margin: 60px 0;
+  }
+
+  .btn {
+    padding: 10px 42px;
+  }
+
+  .widget {
+    position: absolute;
+    z-index: 9;
+    img {
+      width: 100%;
+    }
+  }
+
+  .figure {
+    top: 40px;
+    right: 45px;
+    width: 160px;
+  }
+
+  .pipe {
+    width: 80px;
+    right: 380px;
+    top: 490px;
+  }
+
+  .cursor {
+    width: 200px;
+    right: 40px;
+    top: 490px;
+  }
+
+  .plus-1 {
+    right: -40px;
+    top: 70px;
+  }
+
+  .plus-2 {
+    right: 530px;
+    top: 250px;
+  }
+
+  .plus-3 {
+    top: 450px;
+    right: 280px;
+  }
+
+  .plus-4 {
+    width: 20px;
+    top: 460px;
+    right: 500px;
+  }
+
+  .plus-5 {
+    width: 20px;
+    right: 25px;
+    top: 500px;
+  }
+}

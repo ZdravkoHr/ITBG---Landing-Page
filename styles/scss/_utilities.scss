@@ -1,0 +1,81 @@
+$container-width: min(90%, 1440px);
+.primary-text {
+  text-transform: uppercase;
+  font-size: min(1.5vw, 1.5rem);
+  color: var(--primary-text-color);
+}
+
+.road-text {
+  font-size: 1.2rem;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(90deg, #e9e8fd, #e5bcff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.underlined-text {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 5px;
+    width: 100%;
+    background-color: var(--accent-color);
+    left: 0;
+    box-shadow: -5px 10px 61px var(--accent-color);
+  }
+}
+
+.sm-text {
+  font-size: 0.9rem;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+  font-size: 3.1rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+  @extend .gradient-text;
+}
+
+.btn {
+  cursor: pointer;
+  border: 3px solid var(--blue-400);
+  color: var(--white);
+  background: none;
+  outline: none;
+  padding: 8px 35px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+
+  &-primary {
+    background-color: var(--blue-400);
+  }
+}
+
+.container {
+  margin: auto;
+  width: $container-width;
+}
+
+.main-footer {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  background: var(--secondary-color);
+  padding: 1rem 0;
+}

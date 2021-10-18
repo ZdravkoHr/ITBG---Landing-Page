@@ -1,0 +1,52 @@
+.portfolio {
+  .portfolio-items {
+    display: flex;
+
+    .portfolio-item {
+      margin: auto;
+      width: 700px;
+      height: 590px;
+      background: linear-gradient(
+        177.94deg,
+        #37344b 1.49%,
+        rgba(55, 52, 75, 0) 98.05%
+      );
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .portfolio-image {
+        width: 600px;
+        height: 300px;
+        object-fit: cover;
+        border: 10px solid var(--accent-color);
+        box-sizing: border-box;
+        box-shadow: -5px 10px 61px #d03ad2;
+        display: block;
+        margin: 2.5rem auto;
+      }
+      .portfolio-buttons {
+        margin: 0 5rem 5rem 0;
+        display: flex;
+        justify-content: right;
+
+        .github-btn {
+          margin-right: 2.5rem;
+          position: relative;
+          padding-left: calc(1.5rem + 20px);
+          padding-right: 14px;
+        }
+
+        .button-github-image {
+          width: 1.5rem;
+          margin-right: 10px;
+          text-align: center;
+          position: absolute;
+          left: 10px;
+          top: 19%;
+        }
+      }
+    }
+  }
+}
