@@ -10,16 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/css/main.css" />
     <title>ITBG - Landing Page</title>
   </head>
   <body>
+    <div class="header-gradient">
+      <img src="./assets/header-gradient.png" alt="gradient" />
+    </div>
     <header class="main-header container">
       <nav class="main-nav">
-        <div class="logo-area">
+        <a href="#" class="logo-area">
           <img src="./assets/logo.png" alt="logo" />
           <div class="text">IT Bulgaria</div>
-        </div>
+        </a>
 
         <div class="right-part">
           <ul class="site-menu">
@@ -43,7 +46,7 @@
             </li>
             <li>
               <a href="">
-                <img src="./assets/github.svg" alt="github logo" />
+                <img src="./assets/purple-github.svg" alt="github logo" />
                 github
               </a>
             </li>
@@ -56,24 +59,141 @@
           </ul>
         </div>
       </nav>
-      <div class="hero-section"></div>
+      <section class="hero-section">
+        <div class="widget figure">
+          <img src="./assets/figure.png" alt="figure" />
+        </div>
+        <div class="widget pipe">
+          <img src="./assets/pipe.png" alt="pipe" />
+        </div>
+        <div class="widget cursor">
+          <img src="./assets/cursor.png" alt="cursor" />
+        </div>
+        <div class="widget cursor">
+          <img src="./assets/cursor.png" alt="cursor" />
+        </div>
+        <div class="widget plus-1">
+          <img src="./assets/purple-plus.png" alt="plus" />
+        </div>
+        <div class="widget plus-2">
+          <img src="./assets/purple-plus.png" alt="plus" />
+        </div>
+        <div class="widget plus-3">
+          <img src="./assets/purple-plus.png" alt="plus" />
+        </div>
+        <div class="widget plus-4">
+          <img src="./assets/purple-plus.png" alt="plus" />
+        </div>
+        <div class="widget plus-5">
+          <img src="./assets/purple-plus.png" alt="plus" />
+        </div>
+        <div class="hero-text">
+          <h1 class="main-heading gradient-text">
+            ОНЛАЙН ОБЩНОСТ, КОЯТО ПРЕВРЪЩА ПОВЕЧЕ NOOB-ОВЕ В
+            <span class="underlined-text">JUNIORS</span>
+          </h1>
+
+          <p class="primary-text">
+            LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM
+            LOREM LOREM LOREM LOREM LOREM LOREM LOREM
+          </p>
+
+          <button class="btn btn-primary">Как да помогна?</button>
+        </div>
+        <div class="hero-img">
+          <img src="./assets/discord-image.png" alt="picture from discord" />
+        </div>
+      </section>
     </header>
 
     <main class="main-area container">
-      <section class="intro">
+      <section class="intro" id="intro">
         <h2 class="section-heading"></h2>
       </section>
 
-      <section class="methods"></section>
-
-      <section class="portfolio">
-        <h2 class="section-heading"></h2>
+      <section class="methods">
+        <div class="to-do">
+          <h4><span class="underlined-text">КАКВО НЕ ПРАВИМ?</span></h4>
+          <div class="items">
+            <div class="item">
+              <img src="./assets/red-x.png" alt="No" />
+              <p class="primary-text">
+                НЕ ПРЕПОДАВАМЕ 4 ЧАСОВИ ЛЕЛКЦИИ, ИНТЕРНЕТ Е ПЪЛЕН С РЕСУРСИ
+              </p>
+            </div>
+            <div class="item">
+              <img src="./assets/red-x.png" alt="No" />
+              <p class="primary-text">
+                НЕ КАЗВАМЕ, ЧЕ НЯМА МЕСТА ОТВОРЕНА ОБЩНОСТ СМЕ И ВСЕКИ Е ДОБРЕ
+                ДОШЪЛ
+              </p>
+            </div>
+            <div class="item">
+              <img src="./assets/red-x.png" alt="No" />
+              <p class="primary-text">
+                НЕ ВЗИМАМЕ ПАРИ ОТ НАЧИНАЕЩИТЕ, РАЗЧИТАМЕ НА ИТ ОБЩНОСТТА ДА НИ
+                ПОДКРЕПИ
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="not-to-do">
+          <h4><span class="underlined-text">КАКВО ПРАВИМ?</span></h4>
+          <div class="items">
+            <div class="item">
+              <img src="./assets/check.png" alt="check" />
+              <p class="primary-text">
+                МЕНТОРСТВОТО ЗА НАС Е PROJECT MANAGEMENT, CODE REVIEWS, TECH
+                LEAD
+              </p>
+            </div>
+            <div class="item">
+              <img src="./assets/check.png" alt="check" />
+              <p class="primary-text">
+                МЕНТОРСТВОТО ЗА НАС Е PROJECT MANAGEMENT, CODE REVIEWS, TECH
+                LEAD
+              </p>
+            </div>
+            <div class="item">
+              <img src="./assets/check.png" alt="check" />
+              <p class="primary-text">
+                МЕНТОРСТВОТО ЗА НАС Е PROJECT MANAGEMENT, CODE REVIEWS, TECH
+                LEAD
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="support-us">
-        <h2 class="section-heading"></h2>
+      <section class="portfolio" id="portfolio">
+        <h2 class="section-heading">Портфолио</h2>
+        <div class="portfolio-items">
+          <div class="portfolio-item">
+            <img class="portfolio-image" src="./assets/portfolio-image.png" />
+            <div class="portfolio-buttons">
+              <button class="btn github-btn">
+                <img
+                  class="button-github-image"
+                  src="./assets/white-github.svg"
+                />Код
+              </button>
+              <button class="btn btn-primary">Разгледай го!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-us" id="support-us">
+        <h2 class="section-heading">
+          Кефим те?<img class="heading-image" src="./assets/rocket.svg" />
+        </h2>
+        <p class="primary-text">
+          Всичко се случва през свободното ни време, затова твоята подкрепа ще е
+          от голямо значение за нашата общност, пусни ни имейла си долу:
+        </p>
+        <button class="btn btn-primary">Помогни ни</button>
       </section>
     </main>
-    <footer class="main-footer"></footer>
+    <footer class="main-footer">Направено от</footer>
   </body>
 </html>
