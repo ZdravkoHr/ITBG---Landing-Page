@@ -31,12 +31,16 @@
 }
 
 .section-heading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
 }
 
 .btn {
   cursor: pointer;
-  border: 0;
+  border: 3px solid var(--blue-400);
+  color: var(--white);
+  background: none;
   outline: none;
   padding: 8px;
   border-radius: 3px;
@@ -47,11 +51,27 @@
 .btn-primary {
   background-color: var(--blue-400);
   color: var(--white);
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  padding: 8px 35px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 .container {
   margin: auto;
   width: min(90%, 1440px);
+}
+
+.main-footer {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  background: var(--secondary-color);
+  padding: 1rem 0;
 }
 
 :root {
@@ -232,6 +252,43 @@ body {
   width: 20px;
   right: 25px;
   top: 500px;
+}
+
+.portfolio .portfolio-items {
+  display: flex;
+}
+.portfolio .portfolio-items .portfolio-item {
+  width: 700px;
+  height: 590px;
+  background: linear-gradient(177.94deg, #37344b 1.49%, rgba(55, 52, 75, 0) 98.05%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portfolio .portfolio-items .portfolio-item .portfolio-image {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border: 10px solid var(--accent-color);
+  box-sizing: border-box;
+  box-shadow: -5px 10px 61px #d03ad2;
+  display: block;
+  margin: 2.5rem auto;
+}
+.portfolio .portfolio-items .portfolio-item .portfolio-buttons {
+  margin: 0 5rem 5rem 0;
+  display: flex;
+  justify-content: right;
+}
+.portfolio .portfolio-items .portfolio-item .portfolio-buttons .button-github-image {
+  width: 1.5rem;
+  text-align: center;
+}
+
+.heading-image {
+  padding-left: 1rem;
+  width: 3.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
