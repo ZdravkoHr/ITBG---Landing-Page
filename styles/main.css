@@ -1,6 +1,6 @@
 .primary-text {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--primary-text-color);
 }
 
@@ -14,10 +14,12 @@
 .underlined-text::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   height: 5px;
   width: 100%;
   background-color: var(--accent-color);
+  left: 0;
+  box-shadow: -5px 10px 61px var(--accent-color);
 }
 
 .sm-text {
@@ -144,6 +146,29 @@ body {
 .main-nav .socials img[alt="discord logo"] {
   width: 24px;
   height: 22px;
+}
+
+.methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  grid-gap: 15%;
+}
+
+.to-do h4 {
+  font-size: 2.1rem;
+  color: #9d97bd;
+}
+.to-do .item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.to-do .item img {
+  margin-right: 50px;
+}
+.to-do .item img[alt=check] {
+  width: 61px;
 }
 
 /*# sourceMappingURL=main.css.map */
