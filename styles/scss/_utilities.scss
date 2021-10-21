@@ -1,3 +1,4 @@
+@import 'breakpoints';
 $container-width: min(90%, 1440px);
 .primary-text {
   text-transform: uppercase;
@@ -46,6 +47,14 @@ $container-width: min(90%, 1440px);
   color: var(--heading-color);
   margin-bottom: 3rem;
   @extend .gradient-text;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
 }
 
 .btn {
@@ -64,6 +73,20 @@ $container-width: min(90%, 1440px);
 
   &-primary {
     background-color: var(--blue-400);
+  }
+
+  &-tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &-desktop {
+    @include tablet {
+      display: none;
+    }
   }
 }
 

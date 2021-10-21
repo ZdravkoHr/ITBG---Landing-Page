@@ -2,7 +2,8 @@
 @import './sections/nav-and-header';
 @import './sections/portfolio';
 @import './sections/methods';
-@import './sections/support_us';
+@import './sections/support-us';
+@import './breakpoints';
 
 :root {
   --white: #fff;
@@ -34,4 +35,11 @@ body {
 
 .main-area > section {
   margin-bottom: 15rem;
+}
+
+@include tablet {
+  .primary-text {
+    font-size: clamp(0.9rem, 1.8vw, 2rem);
+    line-height: 1.7rem;
+  }
 }

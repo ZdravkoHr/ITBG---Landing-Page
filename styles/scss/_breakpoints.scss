@@ -1,0 +1,17 @@
+@mixin tablet {
+  @media (max-width: 891px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin hero-img-breakpoint {
+  @media (max-width: 1037px) {
+    @content;
+  }
+}

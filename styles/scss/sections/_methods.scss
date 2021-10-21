@@ -22,4 +22,13 @@
       }
     }
   }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+
+    img,
+    .not-to-do .item img[alt='check'] {
+      width: 40px;
+    }
+  }
 }
