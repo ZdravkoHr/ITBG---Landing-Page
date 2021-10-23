@@ -1,0 +1,12 @@
+.road-map {
+  position: relative;
+  .widget {
+    position: absolute;
+    display: none;
+  }
+
+  .road-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
