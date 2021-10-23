@@ -147,7 +147,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-left: 15px;
-    box-shadow: 0px 0px 50px 20px #802fce, 1px 50px 300px 70px #ae5ccf;
+    box-shadow: 0px 0px 50px 10px #802fce, 1px 50px 300px 30px #ae5ccf;
     img {
       width: 100%;
       height: 100%;
@@ -172,20 +172,20 @@
   }
 
   .figure {
-    top: -70px;
-    right: 45px;
+    top: -100px;
+    right: 80px;
     width: 160px;
   }
 
   .pipe {
     width: 80px;
-    right: 380px;
-    top: 380px;
+    left: 60px;
+    bottom: -60px;
   }
 
   .cursor {
     width: 200px;
-    right: 40px;
+    right: 80px;
     top: 380px;
   }
 
@@ -195,20 +195,21 @@
   }
 
   .plus-2 {
-    right: 530px;
+    left: -50px;
     top: 140px;
+    width: 30px;
   }
 
   .plus-3 {
-    top: 340px;
-    right: 280px;
+    bottom: 45px;
+    right: 360px;
   }
 
   .plus-4 {
     width: 20px;
-    top: 350px;
     right: 350px;
-    left: 50px;
+    left: -30px;
+    bottom: 40px;
   }
 
   .plus-5 {
@@ -249,6 +250,10 @@
       padding-top: 70px;
       flex-direction: column;
       width: 90%;
+    }
+
+    br {
+      display: none;
     }
 
     .hero-img {

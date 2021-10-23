@@ -3,8 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 15%;
 
-  .to-do,
-  .not-to-do {
+  .methods-box {
     h4 {
       font-size: 2.1rem;
       color: #9d97bd;
@@ -27,8 +26,22 @@
     grid-template-columns: 1fr;
 
     img,
-    .not-to-do .item img[alt='check'] {
+    .item img[alt='check'] {
       width: 40px;
+    }
+
+    .methods-box {
+      h4 {
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+  @include mobile {
+    .methods-box {
+      h4 {
+        font-size: 1.3rem;
+      }
     }
   }
 }

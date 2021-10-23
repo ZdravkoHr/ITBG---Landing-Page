@@ -11,7 +11,7 @@
 }
 
 @mixin hero-img-breakpoint {
-  @media (max-width: 1037px) {
+  @media (max-width: 1140px) {
     @content;
   }
 }
