@@ -1,38 +1,87 @@
 .road-map {
   position: relative;
   color: #6a61a5;
+
+  .road-table {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      '. central1 central1 central1 .'
+      '. central2 central2 central2 right1'
+      '. central3 central3 central3 right1'
+      '. central3 central3 central3 right2'
+      '. central4 central4 central4 right2'
+      '. central5 central5 central5 .'
+      'left1 central5 central5 central5 .'
+      'left1 central6 central6 central6 right3'
+      '. central7 central7 central7 .'
+      'left2 central8 central8 central8 right4'
+      '. central9 central9 central9  .'
+      '. central10 central10 central10 .';
+  }
+
+  @for $i from 1 to 11 {
+    .central#{$i} {
+      grid-area: central#{$i};
+    }
+  }
+
+  @for $i from 1 to 5 {
+    .right#{$i} {
+      grid-area: right#{$i};
+    }
+  }
+
+  @for $i from 1 to 3 {
+    .left#{$i} {
+      grid-area: left#{$i};
+    }
+  }
+
+  .central5 {
+    min-height: 100px;
+  }
+
   .widget {
     position: absolute;
     display: none;
   }
 
-  .road-row {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-
-    .flex-col {
-      display: flex;
-      align-items: center;
-    }
-
-    .step {
-      background-color: var(--accent-color);
-      color: var(--white);
-      padding: 10px 16px;
-      border-radius: 50%;
-    }
-
-    .step-link {
-      background-color: var(--accent-color);
-      height: 5px;
-      width: 100%;
-      margin: 0 10px;
-    }
-
-    p {
-      margin: 5px 0;
-    }
+  .vertical-link {
+    background: blue;
+    height: 100%;
+    width: 5px;
   }
+
+  // .road-row {
+  //   display: grid;
+  //   grid-template-columns: 1fr 3fr 1fr;
+
+  .flex-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .step {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 50%;
+  }
+
+  .step-link {
+    background-color: var(--accent-color);
+    height: 8px;
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+  //}
 
   .highlight {
     color: #b1a7ee;
