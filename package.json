@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "sass ./styles/scss/main.scss ./styles/css/main.css -w"
+    "start": "concurrently \"npm run build-css\" \"node liveserver\"",
+    "build-css": "sass ./styles/scss/main.scss ./styles/css/main.css -w",
+    "start-server": "live-server --host=process.dotenv.IP"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,11 @@
   },
   "homepage": "https://github.com/ZdravkoHr/ITBG---Landing-Page#readme",
   "devDependencies": {
+    "concurrently": "^6.3.0",
+    "live-server": "^1.2.1",
     "sass": "^1.43.2"
+  },
+  "dependencies": {
+    "ip": "^1.1.5"
   }
 }

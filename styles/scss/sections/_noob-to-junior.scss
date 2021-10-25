@@ -212,14 +212,47 @@
   }
 
   @include mobile {
+    .widget {
+      display: none;
+    }
     .road-table {
+      grid-template-areas:
+        '. central1 central1 central1 central1'
+        '. central2 central2 central2 right1'
+        '. central3 central3 central3 right2'
+        'left1 central4 central4 central4 right3'
+        'left2 central5 central5 central5 right4'
+        'central6 central6 central6 central6 central6';
       .steps {
         flex-direction: column;
       }
     }
 
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
     .link-left,
     .link-right {
+      height: 300px;
+      margin: 20px 0;
+
+      .steps {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.mobile-reverse {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .step-link {
+        width: 8px;
+        height: calc(100% - 90px);
+      }
       &::before,
       &::after {
         display: none;
