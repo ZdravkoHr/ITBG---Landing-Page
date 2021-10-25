@@ -1,3 +1,14 @@
+.noob-to-junior {
+  margin-top: 15rem;
+  .blue-highlight {
+    color: var(--blue-100);
+  }
+
+  article:first-child {
+    margin-bottom: 10rem;
+  }
+}
+
 .road-map {
   position: relative;
   color: #6a61a5;
