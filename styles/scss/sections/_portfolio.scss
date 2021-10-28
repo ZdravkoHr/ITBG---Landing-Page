@@ -1,9 +1,11 @@
 .portfolio {
+  .section-heading{
+    display: inline-block;
+  }
   .portfolio-items {
     display: flex;
 
     .portfolio-item {
-      margin: auto;
       width: clamp(500px, 80%, 700px);
       height: 590px;
       padding: 0 30px;
@@ -27,11 +29,17 @@
         display: block;
         margin: 2.5rem auto;
       }
+      h3, p{
+        margin: 0 0 1rem 1rem;
+        color: var(--white);
+
+
+      }
       .portfolio-buttons {
-        margin: 0 5rem 5rem 0;
+        margin: 3rem .5rem 5rem 0;
         display: flex;
-        justify-content: center;
-        width: 100%;
+        justify-content: end;
+
 
         .github-btn {
           margin-right: 2.5rem;
@@ -48,6 +56,7 @@
           left: 10px;
           top: 19%;
         }
+
       }
 
       @include mobile {

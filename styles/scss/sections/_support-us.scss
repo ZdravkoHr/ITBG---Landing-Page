@@ -1,8 +1,10 @@
 @import '../breakpoints';
 .support-us {
   width: 80%;
-
-  .btn {
+  .section-heading {
+    display: inline-block;
+  }
+    .btn {
     margin-top: 6rem;
   }
 
