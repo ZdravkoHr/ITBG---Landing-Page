@@ -29,8 +29,7 @@
     display: flex;
   }
 
-  .site-menu,
-  .socials {
+  .site-menu {
     display: flex;
     list-style: none;
 
@@ -46,36 +45,32 @@
     }
   }
 
-  .site-menu {
-    margin-right: 60px;
-  }
+  // .socials {
+  //   transform: translateX(30px);
 
-  .socials {
-    transform: translateX(30px);
+  //   li:first-child {
+  //     margin-top: 3px;
+  //   }
 
-    li:first-child {
-      margin-top: 3px;
-    }
+  //   a {
+  //     display: flex;
+  //     align-items: center;
+  //   }
 
-    a {
-      display: flex;
-      align-items: center;
-    }
+  //   img {
+  //     margin-right: 5px;
 
-    img {
-      margin-right: 5px;
+  //     &[alt='github logo'] {
+  //       width: 25px;
+  //       height: 25px;
+  //     }
 
-      &[alt='github logo'] {
-        width: 25px;
-        height: 25px;
-      }
-
-      &[alt='discord logo'] {
-        width: 24px;
-        height: 22px;
-      }
-    }
-  }
+  //     &[alt='discord logo'] {
+  //       width: 24px;
+  //       height: 22px;
+  //     }
+  //   }
+  // }
 
   @include tablet {
     .logo-area {

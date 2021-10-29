@@ -45,6 +45,24 @@ body {
   margin-bottom: 15rem;
 }
 
+.socials {
+  position: fixed;
+  right: 0;
+  z-index: 99999999;
+  top: 50%;
+  list-style: none;
+
+  li {
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+
+  img[alt='patreon logo'] {
+    width: 23px;
+    margin-left: 3px;
+  }
+}
+
 @include tablet {
   .primary-text {
     font-size: clamp(0.9rem, 1.8vw, 2rem);
