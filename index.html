@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./styles/css/main.css" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+
   <title>ITBG - Landing Page</title>
 </head>
 
@@ -328,6 +334,7 @@
       </div>
     </section>
 
+
     <section class="partners">
         <h2 class="section-heading underlined-text">Партньори</h2>
         <p class="primary-text">Искренни благодарности към всички, които ни подкрепят в Patreon! Искренни благодарности към всички, които ни подкрепят в Patreon!</p>
@@ -336,9 +343,12 @@
             <span class="legend-dot red-dot"></span><span class="legend-text">Senior patron</span>
             <span class="legend-dot blue-dot"></span><span class="legend-text">Junior patron</span>
         </div>
-        <div class="patrons">
+        <div class="touch-slider">
+         
+          <div class="patrons slider-wrapper">
+         
             <div class="patron">
-                <img class="patron-image green-patron" src="./assets/patron.png">
+                <img class="patron-image green-patron" src="./assets/patron.png" onclick="() => alert()">
                 <div class="patron-text">БЪДИ ПЪРВИЯТ</div>
             </div>
             <div class="patron">
@@ -347,6 +357,38 @@
             </div>
             <div class="patron">
                 <img class="patron-image red-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image red-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image red-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image red-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image blue-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image blue-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image blue-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image blue-patron" src="./assets/patron.png">
+                <div class="patron-text">Darius#9947</div>
+            </div>
+            <div class="patron">
+                <img class="patron-image blue-patron" src="./assets/patron.png">
                 <div class="patron-text">Darius#9947</div>
             </div>
             <div class="patron">
@@ -363,6 +405,8 @@
             <img class="patron-image blue-patron" src="./assets/patron.png">
             <div class="patron-text">Darius#9947</div>
         </div>
+     
+      </div>
         </div>
         <button class="btn btn-primary">стани партньор</button>
     </section>
@@ -381,6 +425,11 @@
     </section>
   </main>
   <footer class="main-footer">Направено от</footer>
+
+
+  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+  <script src="./scripts/touch-slider.js"></script>
 </body>
 
 </html>
