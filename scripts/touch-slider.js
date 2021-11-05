@@ -100,4 +100,5 @@ class TouchSlider {
   }
 }
 
-const patronsSlider = new TouchSlider('.touch-slider');
+new TouchSlider('.touch-slider');
+new TouchSlider('.portfolio-slider');
