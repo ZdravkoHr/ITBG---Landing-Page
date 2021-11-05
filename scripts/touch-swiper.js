@@ -1,4 +1,4 @@
-class TouchSlider {
+export default class TouchSwiper {
   constructor(selector) {
     this.selector = selector;
     this.dragging = false;
@@ -99,6 +99,3 @@ class TouchSlider {
     this.wrapper.style.marginLeft = this.marginOffset + 'px';
   }
 }
-
-new TouchSlider('.touch-slider');
-new TouchSlider('.portfolio-slider');

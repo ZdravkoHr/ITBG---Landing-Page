@@ -21,11 +21,12 @@
   "homepage": "https://github.com/ZdravkoHr/ITBG---Landing-Page#readme",
   "devDependencies": {
     "concurrently": "^6.3.0",
-    "live-server": "^1.2.1",
+    "live-server": "^1.1.0",
     "sass": "^1.43.2"
   },
   "dependencies": {
     "ip": "^1.1.5",
-    "swiper": "^7.2.0"
+    "swiper": "^7.2.0",
+    "touch-swiper": "^1.0.0"
   }
 }
