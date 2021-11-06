@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   background-color: var(--primary-color);
