@@ -269,7 +269,14 @@
   }
 
   @include mobile {
+    .logo-area {
+      margin: auto;
+    }
+    .right-part {
+      display: none;
+    }
     .hero-section {
+      padding-top: 20px;
       width: 100%;
     }
   }
