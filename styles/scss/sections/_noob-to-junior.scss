@@ -230,6 +230,28 @@
       .special-text {
         transform: translate(-100px, -88px);
       }
+
+      .special {
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+
+        img {
+          margin-left: 10px;
+          width: 120px;
+          display: block;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 335px;
+          width: 8px;
+          background-color: var(--accent-color);
+          bottom: 110px;
+          transform: translateX(-6px);
+        }
+      }
     }
 
     .right-col {
