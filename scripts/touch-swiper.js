@@ -107,6 +107,7 @@ export default class TouchSwiper {
       this.pxToNum(paddingRight);
 
     this.fullWidth = fullWidth;
+    console.log(this.el, this.fullWidth);
   }
 
   getMarginOffset(xDiff) {

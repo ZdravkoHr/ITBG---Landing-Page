@@ -65,7 +65,7 @@
       }
 
       @include mobile {
-        width: clamp(300px, 49%, 700px);
+        width: clamp(300px, 3vw, 700px);
         height: auto;
 
         &:first-child {
