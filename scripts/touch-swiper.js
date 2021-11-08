@@ -2,17 +2,69 @@ export default class TouchSwiper {
   constructor(selector) {
     this.selector = selector;
     this.dragging = false;
+
     this.marginOffset = 0;
     this.prevMarginOffset = 0;
     this.direction = 0;
     this.init();
   }
 
+  set touchEvent(val) {
+    this.isTouchEvent = val;
+    this.moveEvent = this.touchEvent ? 'touchmove' : 'mousemove';
+    this.releaseEvent = this.touchEvent ? 'touchend' : 'mouseup';
+  }
+
+  get touchEvent() {
+    return this.isTouchEvent || false;
+  }
+
   init() {
     this.setElements();
     this.setBoundFunctions();
-    this.fullWidth = this.calcFullWidth();
-    this.el.addEventListener('mousedown', this.onMouseDown);
+    this.setFullWidth();
+
+    this.el.addEventListener('mousedown', (e) => {
+      this.touchEvent = false;
+      this.onStart(e);
+    });
+
+    this.el.addEventListener('touchstart', (e) => {
+      this.touchEvent = true;
+      this.onStart(e);
+    });
+
+    window.addEventListener('resize', this.setFullWidth);
+  }
+
+  handleStart(e) {
+    e.preventDefault();
+    this.initX = this.getClientX(e);
+    this.el.addEventListener(this.moveEvent, this.onMove);
+    this.el.addEventListener(this.releaseEvent, this.onRelease);
+    return;
+  }
+
+  handleRelease() {
+    this.el.removeEventListener(this.moveEvent, this.onMouseMove);
+    this.el.removeEventListener(this.releaseEvent, this.onMouseUp);
+    this.prevMarginOffset = this.marginOffset;
+  }
+
+  getClientX(e) {
+    const source = this.touchEvent ? e.touches[0] : e;
+    return source.clientX;
+  }
+
+  handleMove(e) {
+    const xDiff = this.initX - this.getClientX(e);
+
+    this.setDirection(xDiff);
+
+    if (this.prevMarginOffset - xDiff > 0) return;
+
+    this.marginOffset = this.getMarginOffset(xDiff);
+    this.wrapper.style.marginLeft = this.marginOffset + 'px';
   }
 
   setElements() {
@@ -21,9 +73,9 @@ export default class TouchSwiper {
   }
 
   setBoundFunctions() {
-    this.onMouseDown = this.handleMouseDown.bind(this);
-    this.onMouseUp = this.handleMouseUp.bind(this);
-    this.onMouseMove = this.handleMouseMove.bind(this);
+    this.onStart = this.handleStart.bind(this);
+    this.onRelease = this.handleRelease.bind(this);
+    this.onMove = this.handleMove.bind(this);
   }
 
   setDirection(xDiff) {
@@ -35,7 +87,7 @@ export default class TouchSwiper {
     return Number(numericValue);
   }
 
-  calcFullWidth() {
+  setFullWidth() {
     const paddingRight = window.getComputedStyle(this.wrapper).paddingRight;
     let totalChildrenWidth = 0;
     let totalMarginLeft = 0;
@@ -48,12 +100,13 @@ export default class TouchSwiper {
       totalMarginRight += this.pxToNum(style.marginRight);
     });
 
-    return (
+    const fullWidth =
       totalChildrenWidth +
       totalMarginLeft +
       totalMarginRight +
-      this.pxToNum(paddingRight)
-    );
+      this.pxToNum(paddingRight);
+
+    this.fullWidth = fullWidth;
   }
 
   getMarginOffset(xDiff) {
@@ -74,28 +127,5 @@ export default class TouchSwiper {
     }
 
     return endValue - xDiff;
-  }
-
-  handleMouseDown(e) {
-    e.preventDefault();
-    this.initX = e.clientX;
-    this.el.addEventListener('mousemove', this.onMouseMove);
-    this.el.addEventListener('mouseup', this.onMouseUp);
-  }
-
-  handleMouseUp() {
-    this.el.removeEventListener('mousemove', this.onMouseMove);
-    this.el.removeEventListener('mouseup', this.onMouseUp);
-    this.prevMarginOffset = this.marginOffset;
-  }
-
-  handleMouseMove(e) {
-    const xDiff = this.initX - e.clientX;
-    this.setDirection(xDiff);
-
-    if (this.prevMarginOffset - xDiff > 0) return;
-
-    this.marginOffset = this.getMarginOffset(xDiff);
-    this.wrapper.style.marginLeft = this.marginOffset + 'px';
   }
 }
