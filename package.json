@@ -25,8 +25,6 @@
     "sass": "^1.43.2"
   },
   "dependencies": {
-    "ip": "^1.1.5",
-    "swiper": "^7.2.0",
-    "touch-swiper": "^1.0.0"
+    "ip": "^1.1.5"
   }
 }
