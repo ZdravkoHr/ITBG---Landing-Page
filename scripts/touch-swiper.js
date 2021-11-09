@@ -34,7 +34,11 @@ export default class TouchSwiper {
       this.onStart(e);
     });
 
-    window.addEventListener('resize', this.setFullWidth);
+    this.el.addEventListener('mouseleave', () => {
+      this.onRelease();
+    });
+
+    window.addEventListener('resize', () => this.setFullWidth());
   }
 
   handleStart(e) {
@@ -46,8 +50,8 @@ export default class TouchSwiper {
   }
 
   handleRelease() {
-    this.el.removeEventListener(this.moveEvent, this.onMouseMove);
-    this.el.removeEventListener(this.releaseEvent, this.onMouseUp);
+    this.el.removeEventListener(this.moveEvent, this.onMove);
+    this.el.removeEventListener(this.releaseEvent, this.onRelease);
     this.prevMarginOffset = this.marginOffset;
   }
 
@@ -107,7 +111,6 @@ export default class TouchSwiper {
       this.pxToNum(paddingRight);
 
     this.fullWidth = fullWidth;
-    console.log(this.el, this.fullWidth);
   }
 
   getMarginOffset(xDiff) {
