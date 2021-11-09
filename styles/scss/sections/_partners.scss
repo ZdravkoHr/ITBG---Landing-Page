@@ -73,4 +73,13 @@
   .btn {
     margin-top: 6rem;
   }
+
+  @media (max-width: 580px) {
+    .legend {
+      display: block;
+      &-item {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
