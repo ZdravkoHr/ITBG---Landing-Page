@@ -25,19 +25,19 @@
       'left2 central5 central5 central5 right4'
       '. central6 central6 central6 .';
 
-    // .special {
-    //   p {
-    //     display: flex;
-    //     align-items: center;
-    //     margin-left: -30px;
-    //     margin-top: -20px;
-    //   }
+    .special {
+      p {
+        display: flex;
+        align-items: center;
+        margin-left: -30px;
+        margin-top: -20px;
+      }
 
-    //   img {
-    //     width: 120px;
-    //     margin-left: -13px;
-    //   }
-    // }
+      img {
+        width: 120px;
+        margin-left: -13px;
+      }
+    }
   }
 
   @for $i from 1 to 8 {
@@ -260,6 +260,11 @@
         display: flex;
         justify-content: center;
         margin-top: 300px;
+
+        p {
+          display: block;
+          margin: 0;
+        }
 
         img {
           margin-left: 10px;
