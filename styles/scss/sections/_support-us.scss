@@ -7,7 +7,16 @@
     .btn {
     margin-top: 6rem;
   }
-
+  &-right-gradient{
+    position: absolute;
+    left: 1515px;
+    top: 5342px;
+  }
+ &-left-gradient {
+   position: absolute;
+   left: -855px;
+   top: 6155px;
+ }
   @include mobile {
     width: 100%;
   }

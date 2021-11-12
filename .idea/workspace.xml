@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bd73a08-8297-4584-957e-d9c49a159abc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/styles/scss/sections/_partners.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/rocket.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/sections/_portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/sections/_portfolio.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/scss/sections/_support-us.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/sections/_support-us.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../xampp_/htdocs/IT-BG" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/itbgnews" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -65,7 +62,10 @@
       <workItem from="1634571281204" duration="97000" />
       <workItem from="1635341776250" duration="5286000" />
       <workItem from="1635426757167" duration="1820000" />
-      <workItem from="1635428611124" duration="6583000" />
+      <workItem from="1635428611124" duration="8502000" />
+      <workItem from="1636365815626" duration="5358000" />
+      <workItem from="1636378451367" duration="1824000" />
+      <workItem from="1636709556313" duration="324000" />
     </task>
     <servers />
   </component>
