@@ -1,4 +1,5 @@
 .partners {
+  --partner-border-width: 10px;
   .section-heading {
     display: inline-block;
   }
@@ -42,32 +43,35 @@
       width: 200px;
       flex-shrink: 0;
       user-select: none;
-      .patron-image {
-        object-fit: cover;
-        width: 170px;
-        height: 170px;
-      }
-      .green-patron {
-        border: 10px solid var(--green);
-        border-radius: 50%;
-        filter: drop-shadow(11px 2px 71px #1abc9c);
-      }
-      .red-patron {
-        border: 10px solid var(--red);
-        border-radius: 50%;
-        filter: drop-shadow(11px 2px 71px #ff4949);
-      }
-      .blue-patron {
-        border: 10px solid var(--blue-400);
-        border-radius: 50%;
-        filter: drop-shadow(11px 2px 71px #095dff);
-      }
+
       .patron-text {
         text-align: center;
         margin-top: 2rem;
         color: var(--blue-200);
       }
     }
+  }
+
+  .green-patron {
+    border: var(--partner-border-width) solid var(--green);
+    border-radius: 50%;
+    filter: drop-shadow(11px 2px 71px #1abc9c);
+  }
+  .red-patron {
+    border: var(--partner-border-width) solid var(--red);
+    border-radius: 50%;
+    filter: drop-shadow(11px 2px 71px #ff4949);
+  }
+  .blue-patron {
+    border: var(--partner-border-width) solid var(--blue-400);
+    border-radius: 50%;
+    filter: drop-shadow(11px 2px 71px #095dff);
+  }
+
+  .patron-image {
+    object-fit: cover;
+    width: 170px;
+    height: 170px;
   }
 
   .btn {
@@ -79,6 +83,26 @@
       display: block;
       &-item {
         margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include mobile {
+    --partner-border-width: 3px;
+    .patrons {
+      padding: 50px 20px;
+      text-align: center;
+      .patron {
+        width: 130px;
+
+        &-image {
+          width: 100px;
+          height: 100px;
+        }
+
+        &-text {
+          font-size: 0.8rem;
+        }
       }
     }
   }
