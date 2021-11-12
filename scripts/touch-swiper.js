@@ -1,8 +1,8 @@
 export default class TouchSwiper {
-  constructor(selector) {
+  constructor(selector, step = 10) {
     this.selector = selector;
     this.dragging = false;
-
+    this.step = step;
     this.marginOffset = 0;
     this.prevMarginOffset = 0;
     this.direction = 0;
@@ -114,11 +114,12 @@ export default class TouchSwiper {
   }
 
   getMarginOffset(xDiff) {
-    const newValue = Math.abs(this.prevMarginOffset - xDiff);
+    const moveBy = this.direction * (this.step + Math.abs(xDiff));
+    const newValue = Math.abs(this.prevMarginOffset - moveBy);
     const maxMargin = this.fullWidth - this.el.offsetWidth;
 
     if (newValue <= maxMargin) {
-      return this.prevMarginOffset - xDiff;
+      return this.prevMarginOffset - moveBy;
     }
 
     if (this.direction === 1) {
@@ -130,6 +131,6 @@ export default class TouchSwiper {
       endValue = this.prevMarginOffset;
     }
 
-    return endValue - xDiff;
+    return endValue - moveBy;
   }
 }
