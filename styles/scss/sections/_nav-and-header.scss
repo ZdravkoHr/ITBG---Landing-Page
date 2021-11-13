@@ -1,4 +1,3 @@
-@import '../breakpoints';
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -45,33 +44,6 @@
     }
   }
 
-  // .socials {
-  //   transform: translateX(30px);
-
-  //   li:first-child {
-  //     margin-top: 3px;
-  //   }
-
-  //   a {
-  //     display: flex;
-  //     align-items: center;
-  //   }
-
-  //   img {
-  //     margin-right: 5px;
-
-  //     &[alt='github logo'] {
-  //       width: 25px;
-  //       height: 25px;
-  //     }
-
-  //     &[alt='discord logo'] {
-  //       width: 24px;
-  //       height: 22px;
-  //     }
-  //   }
-  // }
-
   @include tablet {
     .logo-area {
       flex-direction: column;
@@ -104,12 +76,6 @@
       display: none;
     }
   }
-
-  /*@media (max-width: 613px) {
-    .site-menu {
-      display: none;
-    }
-  }*/
 }
 
 .header-gradient {
@@ -165,6 +131,7 @@
   .widget {
     position: absolute;
     z-index: 9;
+    animation: float-y 6s ease-in infinite;
     img {
       width: 100%;
     }

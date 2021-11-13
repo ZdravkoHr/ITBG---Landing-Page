@@ -60,6 +60,7 @@
 
   .widget {
     position: absolute;
+    animation: 3s scale-up infinite ease-in-out;
 
     img {
       width: 100%;

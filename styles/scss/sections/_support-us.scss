@@ -38,6 +38,10 @@
     z-index: -1;
   }
 
+  .rocket {
+    animation: float-y 3s ease-in infinite;
+  }
+
   @include tablet {
     .grid {
       grid-template-columns: 1fr;
