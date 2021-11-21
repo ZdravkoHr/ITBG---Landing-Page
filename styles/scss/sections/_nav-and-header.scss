@@ -24,6 +24,17 @@
     }
   }
 
+  .mobile-socials {
+    list-style: none;
+    display: none;
+    align-items: center;
+    margin: 10px 0;
+
+    li {
+      margin-right: 15px;
+    }
+  }
+
   .right-part {
     display: flex;
   }
@@ -73,6 +84,21 @@
     }
 
     .social-text {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    & {
+      flex-direction: column;
+    }
+    .logo-area {
+      margin: auto;
+    }
+    .mobile-socials {
+      display: flex;
+    }
+    .right-part {
       display: none;
     }
   }
@@ -236,12 +262,6 @@
   }
 
   @include mobile {
-    .logo-area {
-      margin: auto;
-    }
-    .right-part {
-      display: none;
-    }
     .hero-section {
       padding-top: 20px;
       width: 100%;
