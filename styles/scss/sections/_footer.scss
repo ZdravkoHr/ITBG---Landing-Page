@@ -2,6 +2,12 @@
   a {
     color: inherit;
     text-decoration: none;
+    img{
+      transition: 350ms;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
   }
 
   .main-container {

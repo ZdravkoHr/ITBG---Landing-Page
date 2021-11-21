@@ -76,6 +76,12 @@
 
   .btn {
     margin-top: 6rem;
+    transition: 250ms;
+    &:hover{
+      background-color: #e9e8fd;
+      border: 3px solid #e9e8fd;
+      color: #000;
+    }
   }
 
   @media (max-width: 580px) {
