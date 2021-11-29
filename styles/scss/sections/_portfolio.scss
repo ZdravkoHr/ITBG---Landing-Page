@@ -2,12 +2,17 @@
   .section-heading {
     display: inline-block;
   }
+  .slideshow-container{
+    max-width: 700px;
+    position: relative;
+    margin:  auto;
+  }
   .portfolio-items {
     display: flex;
     overflow: hidden;
 
     .portfolio-item {
-      margin-left: 40px;
+      margin-left: 0px;
       //width: clamp(500px, 80%, 700px);
       flex-shrink: 0;
       width: 700px;
@@ -119,6 +124,33 @@
           }
         }
       }
+      
     }
   }
+  .prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #fff;
+  color: rgba(0,0,0,0.8);
+}
 }
