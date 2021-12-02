@@ -10,6 +10,7 @@
   .portfolio-items {
     display: flex;
     overflow: hidden;
+    margin-top: 40px;
 
     .portfolio-item {
       margin-left: 0px;
@@ -130,15 +131,16 @@
   .prev, .next {
     cursor: pointer;
     position: relative;
+    top: 50%;
     width: auto;
     padding: 16px;
     color: white;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #37344b;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-  }
-  .prev:hover, .next:hover {
-    background-color: #d03ad2;
+    &:hover{
+      background-color: #d03ad2;
+    }
   }
 }
