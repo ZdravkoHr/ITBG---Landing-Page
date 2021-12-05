@@ -48,6 +48,12 @@ body {
   margin-bottom: 15rem;
 }
 
+.touch-slider,
+.portfolio-slider {
+  overflow: hidden;
+  cursor: grab;
+}
+
 .socials {
   position: fixed;
   right: 0;
