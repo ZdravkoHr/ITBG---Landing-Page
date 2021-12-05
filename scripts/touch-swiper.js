@@ -118,6 +118,8 @@ export default class TouchSwiper {
     const newValue = Math.abs(this.prevMarginOffset - moveBy);
     const maxMargin = this.fullWidth - this.el.offsetWidth;
 
+    if (this.fullWidth <= this.el.offsetWidth) return 0;
+
     if (newValue <= maxMargin) {
       return this.prevMarginOffset - moveBy;
     }
