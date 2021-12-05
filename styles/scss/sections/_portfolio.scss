@@ -48,6 +48,12 @@
           position: relative;
           padding-left: calc(1.5rem + 20px);
           padding-right: 14px;
+
+          &:hover {
+            background-color: #095dff;
+            color: #fff;
+            border: 3px solid var(--blue-400);
+          }
         }
 
         .button-github-image {

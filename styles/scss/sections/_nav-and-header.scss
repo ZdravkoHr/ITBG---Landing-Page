@@ -52,6 +52,10 @@
       text-decoration: none;
       color: var(--primary-text-color);
       cursor: pointer;
+      transition: 250ms;
+      &:hover {
+        color: #e7e6ff;
+      }
     }
   }
 

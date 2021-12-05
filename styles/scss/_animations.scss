@@ -29,3 +29,10 @@
     transform: translate(0);
   }
 }
+
+.hover-scale-up {
+  transition: 350ms;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

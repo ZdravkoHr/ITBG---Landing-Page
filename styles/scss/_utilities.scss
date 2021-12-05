@@ -77,6 +77,12 @@ $container-width: min(90%, 1440px);
   font-weight: 900;
   display: flex;
   align-items: center;
+  transition: 250ms;
+  &:hover {
+    background-color: #e9e8fd;
+    color: #000;
+    border: 3px solid #e9e8fd;
+  }
 
   &-primary {
     background-color: var(--blue-400);
