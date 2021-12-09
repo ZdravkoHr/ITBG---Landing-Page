@@ -2,12 +2,59 @@
   .section-heading {
     display: inline-block;
   }
+
+  .portfolio-holder {
+    position: relative;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    &:hover {
+      color: #d03ad2;
+    }
+  }
+
+  .prev {
+    left: 17px;
+
+    @include tablet {
+      left: 5px;
+    }
+
+    @include mobile {
+      left: -5px;
+      font-size: 15px;
+    }
+  }
+
+  .next {
+    right: -10px;
+  }
+
+  .portfolio-slider {
+    width: 90%;
+    margin: auto;
+  }
+
   .portfolio-items {
     display: flex;
     overflow: hidden;
 
-    .portfolio-item {
+    .portfolio-item + .portfolio-item {
       margin-left: 40px;
+    }
+
+    .portfolio-item {
+      overflow: hidden;
       //width: clamp(500px, 80%, 700px);
       flex-shrink: 0;
       width: 700px;
