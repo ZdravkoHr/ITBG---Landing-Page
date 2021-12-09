@@ -5,6 +5,7 @@ export default class TouchSwiper {
     this.options = options;
     this.step = options?.step || 10;
     this.marginOffset = 0;
+    this.prevMarginOffset = 0;
     this.direction = 0;
     this.init();
   }
@@ -76,7 +77,7 @@ export default class TouchSwiper {
     this.setDirection(xDiff);
 
     if (this.prevMarginOffset - xDiff > 0) return;
-
+  
     this.marginOffset = this.getMarginOffset(xDiff);
     this.wrapper.style.marginLeft = this.marginOffset + 'px';
   }
@@ -91,9 +92,9 @@ export default class TouchSwiper {
 
   slideBack() {
     //  this.wrapper.style.transition = 'margin 0.5s';
-    console.log(this.fullWidth);
+    // console.log(this.fullWidth);
     this.marginOffset -= this.wrapper.offsetWidth / 2;
-    console.log(this.maxMargin);
+    // console.log(this.maxMargin);
   }
 
   slideForward() {}
@@ -144,7 +145,7 @@ export default class TouchSwiper {
     const moveBy = this.direction * (this.step + Math.abs(xDiff));
     const newValue = Math.abs(this.prevMarginOffset - moveBy);
     const maxMargin = this.fullWidth - this.el.offsetWidth;
-
+  console.log(this.prevMarginOffset);
     if (this.fullWidth <= this.el.offsetWidth) return 0;
 
     if (newValue <= maxMargin) {
