@@ -1,10 +1,10 @@
 export default class TouchSwiper {
-  constructor(selector, step = 10) {
+  constructor(selector, options) {
     this.selector = selector;
     this.dragging = false;
-    this.step = step;
+    this.options = options;
+    this.step = options?.step || 10;
     this.marginOffset = 0;
-    this.prevMarginOffset = 0;
     this.direction = 0;
     this.init();
   }
@@ -14,6 +14,16 @@ export default class TouchSwiper {
     this.moveEvent = this.touchEvent ? 'touchmove' : 'mousemove';
     this.releaseEvent = this.touchEvent ? 'touchend' : 'mouseup';
   }
+
+  // set marginOffset(val) {
+  //   console.log(val);
+  //   if (this.wrapper) this.wrapper.style.marginLeft = val + 'px';
+  //   this._marginOffset = val;
+  // }
+
+  // get marginOffset() {
+  //   return this._marginOffset;
+  // }
 
   get touchEvent() {
     return this.isTouchEvent || false;
@@ -74,6 +84,23 @@ export default class TouchSwiper {
   setElements() {
     this.el = document.querySelector(this.selector);
     this.wrapper = this.el.querySelector('.slider-wrapper');
+    this.prevEl = document.querySelector(this.options?.prevSelector) || null;
+    this.nextEl = document.querySelector(this.options?.nextSelector) || null;
+    this.bindControls();
+  }
+
+  slideBack() {
+    //  this.wrapper.style.transition = 'margin 0.5s';
+    console.log(this.fullWidth);
+    this.marginOffset -= this.wrapper.offsetWidth / 2;
+    console.log(this.maxMargin);
+  }
+
+  slideForward() {}
+
+  bindControls() {
+    this.prevEl?.addEventListener('click', this.slideBack.bind(this));
+    this.nextEl?.addEventListener('click', this.slideForward.bind(this));
   }
 
   setBoundFunctions() {

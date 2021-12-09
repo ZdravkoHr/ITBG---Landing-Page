@@ -48,6 +48,7 @@
   .portfolio-items {
     display: flex;
     overflow: hidden;
+    transition: margin 0.5s;
 
     .portfolio-item + .portfolio-item {
       margin-left: 40px;
