@@ -16,15 +16,31 @@ export default class TouchSwiper {
     this.releaseEvent = this.touchEvent ? 'touchend' : 'mouseup';
   }
 
-  // set marginOffset(val) {
-  //   console.log(val);
-  //   if (this.wrapper) this.wrapper.style.marginLeft = val + 'px';
-  //   this._marginOffset = val;
-  // }
+  set marginOffset(val) {
+   
+    if (!this.wrapper) {
+      this._marginOffset = 0;
+      return;
+    }
+    
+    if (this.direction === -1) {
+ this._marginOffset = Math.max(val, -this.maxMargin);
+    } else {
+      this._marginOffset = Math.min(val, 0);
+    }
 
-  // get marginOffset() {
-  //   return this._marginOffset;
-  // }
+   
+    this.wrapper.style.marginLeft = this._marginOffset + 'px';
+
+  }
+
+  get marginOffset() {
+    return this._marginOffset;
+  }
+
+  get maxMargin() {
+   return this.fullWidth - this.el.offsetWidth;
+  }
 
   get touchEvent() {
     return this.isTouchEvent || false;
@@ -90,14 +106,16 @@ export default class TouchSwiper {
     this.bindControls();
   }
 
-  slideBack() {
-    //  this.wrapper.style.transition = 'margin 0.5s';
-    // console.log(this.fullWidth);
-    this.marginOffset -= this.wrapper.offsetWidth / 2;
-    // console.log(this.maxMargin);
+  slideForward() {
+   
+    this.direction = -1;
+    this.marginOffset = this.marginOffset - this.el.offsetWidth / 2;
   }
 
-  slideForward() {}
+  slideBack() {
+    this.direction = 1;
+    this.marginOffset = this.marginOffset + this.el.offsetWidth / 2;
+  }
 
   bindControls() {
     this.prevEl?.addEventListener('click', this.slideBack.bind(this));
@@ -144,8 +162,7 @@ export default class TouchSwiper {
   getMarginOffset(xDiff) {
     const moveBy = this.direction * (this.step + Math.abs(xDiff));
     const newValue = Math.abs(this.prevMarginOffset - moveBy);
-    const maxMargin = this.fullWidth - this.el.offsetWidth;
-  console.log(this.prevMarginOffset);
+    const maxMargin = this.maxMargin;
     if (this.fullWidth <= this.el.offsetWidth) return 0;
 
     if (newValue <= maxMargin) {
