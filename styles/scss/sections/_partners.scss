@@ -3,6 +3,7 @@
   .section-heading {
     display: inline-block;
   }
+
   .legend {
     display: flex;
     align-items: center;
@@ -28,15 +29,18 @@
     }
   }
 
+  .partners-holder {
+    position: relative;
+  }
+
   .touch-slider {
-    width: 111%;
-    margin-left: -5.5%;
+    width: 90%;
+    margin: auto;
   }
 
   .patrons {
     display: flex;
     overflow-x: hidden;
-    // transition: margin 0.2s;
     padding: 50px 90px;
     .patron {
       width: 200px;
