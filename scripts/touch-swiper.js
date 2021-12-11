@@ -122,18 +122,21 @@ export default class TouchSwiper {
     this.bindControls();
   }
 
-  swipeForward() {
+  swipe(direction) {
     if (this.controlSwiping) return;
     this.controlSwiping = true;
-    this.direction = -1;
-    this.marginOffset = this.marginOffset - this.el.offsetWidth / 2;
+    this.direction = direction;
+    this.marginOffset =
+      this.marginOffset + (this.el.offsetWidth * direction) / 2;
+    this.prevMarginOffset = this.marginOffset;
+  }
+
+  swipeForward() {
+    this.swipe(-1);
   }
 
   swipeBack() {
-    if (this.controlSwiping) return;
-    this.controlSwiping = true;
-    this.direction = 1;
-    this.marginOffset = this.marginOffset + this.el.offsetWidth / 2;
+    this.swipe(1);
   }
 
   bindControls() {
