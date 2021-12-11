@@ -7,6 +7,7 @@ export default class TouchSwiper {
     this.marginOffset = 0;
     this.prevMarginOffset = 0;
     this.direction = 0;
+    this.controlSwiping = false;
     this.init();
   }
 
@@ -17,21 +18,35 @@ export default class TouchSwiper {
   }
 
   set marginOffset(val) {
-   
     if (!this.wrapper) {
       this._marginOffset = 0;
       return;
     }
-    
+
     if (this.direction === -1) {
- this._marginOffset = Math.max(val, -this.maxMargin);
+      this._marginOffset = Math.max(val, -this.maxMargin);
     } else {
       this._marginOffset = Math.min(val, 0);
     }
 
-   
     this.wrapper.style.marginLeft = this._marginOffset + 'px';
+  }
 
+  set controlSwiping(val) {
+    this._swiping = val;
+
+    if (!val) return;
+
+    this.wrapper.style.transition = '0.5s';
+
+    setTimeout(() => {
+      this.wrapper.style.transition = '0s';
+      this.controlSwiping = false;
+    }, 500);
+  }
+
+  get controlSwiping() {
+    return this._swiping;
   }
 
   get marginOffset() {
@@ -39,7 +54,7 @@ export default class TouchSwiper {
   }
 
   get maxMargin() {
-   return this.fullWidth - this.el.offsetWidth;
+    return this.fullWidth - this.el.offsetWidth;
   }
 
   get touchEvent() {
@@ -70,6 +85,7 @@ export default class TouchSwiper {
 
   handleStart(e) {
     e.preventDefault();
+    if (this.controlSwiping) return;
     this.initX = this.getClientX(e);
     this.el.addEventListener(this.moveEvent, this.onMove);
     this.el.addEventListener(this.releaseEvent, this.onRelease);
@@ -93,7 +109,7 @@ export default class TouchSwiper {
     this.setDirection(xDiff);
 
     if (this.prevMarginOffset - xDiff > 0) return;
-  
+
     this.marginOffset = this.getMarginOffset(xDiff);
     this.wrapper.style.marginLeft = this.marginOffset + 'px';
   }
@@ -106,20 +122,23 @@ export default class TouchSwiper {
     this.bindControls();
   }
 
-  slideForward() {
-   
+  swipeForward() {
+    if (this.controlSwiping) return;
+    this.controlSwiping = true;
     this.direction = -1;
     this.marginOffset = this.marginOffset - this.el.offsetWidth / 2;
   }
 
-  slideBack() {
+  swipeBack() {
+    if (this.controlSwiping) return;
+    this.controlSwiping = true;
     this.direction = 1;
     this.marginOffset = this.marginOffset + this.el.offsetWidth / 2;
   }
 
   bindControls() {
-    this.prevEl?.addEventListener('click', this.slideBack.bind(this));
-    this.nextEl?.addEventListener('click', this.slideForward.bind(this));
+    this.prevEl?.addEventListener('click', this.swipeBack.bind(this));
+    this.nextEl?.addEventListener('click', this.swipeForward.bind(this));
   }
 
   setBoundFunctions() {
